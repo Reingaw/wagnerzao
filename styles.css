@@ -1,12 +1,24 @@
+:root {
+    --bg-black: #12130F;
+    --text-gray-500: rgba(255, 255, 255, .5);
+    --text-gray-600: rgba(255, 255, 255, .6);
+    --text-gray-700: rgba(255, 255, 255, .7);
+    --white: #FFF
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
-    color: #5a5a5a;
+    color: var(--text-gray-500);
 }
 
 li {
@@ -14,22 +26,26 @@ li {
 }
 
 html {
-    background: #12130F;
+    background: var(--bg-black);
 }
 
 body {
     min-height: 100vh;
+    color: var(--text-gray-500);
 }
 
 body, textarea, button {
     font-family: 'Roboto', sans-serif;
 }
 
+header {
+    background: rgba(0,0,0,.2);
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
     margin-inline: auto;
-    border: 1px dashed #5a5a5a;
 }
 
 .header {
@@ -55,5 +71,95 @@ body, textarea, button {
 }
 
 .header i:hover {
-    color: #FFF;
+    color: var(--white);
+}
+
+/***** Wavy Text *****/
+.wavy-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 120px;
+}
+.wavy {
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, .2));
+}
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: var(--text-gray-500);
+    font-size: 3em;
+    text-transform: uppercase;
+    animation: animateText 3s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animateText {
+    0%, 40%, 100% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+}
+
+/***** Wavy Button *****/
+.wavy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wavy-button a {
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    border: 2px solid var(--text-gray-500);
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: var(--text-gray-500);
+    text-decoration: none;
+    overflow: hidden;
+}
+.wavy-button a:hover {    
+    border: 2px solid #00aeff;
+    transition: 1s;
+}
+.wavy-button a span {
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+}
+.wavy-button a:hover span {
+    color: #fff;
+}
+.wavy-button a .wave {
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00aeff;
+    transition: 1s;
+}
+.wavy-button a:hover .wave {
+    top: 0;
+}
+.wavy-button a .wave:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(img/wave.png);
+    animation: animateButton .5s linear infinite;
+}
+@keyframes animateButton {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 118px;
+    }
 }
