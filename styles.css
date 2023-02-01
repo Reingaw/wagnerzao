@@ -50,9 +50,13 @@ header {
 
 .header {
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 1rem;
+}
+
+.header a {
+    font-size: 1.375em;
 }
 
 .header ul {
@@ -65,12 +69,13 @@ header {
     
 }
 
-.header i {
+.header i, .header a {
     transition: color .3s;
     font-size: 1.375rem;
 }
 
-.header i:hover {
+.header i:hover,
+.header a:hover {
     color: var(--white);
 }
 
@@ -89,7 +94,7 @@ header {
     position: relative;
     display: inline-block;
     color: var(--text-gray-500);
-    font-size: 3em;
+    font-size: 4em;
     text-transform: uppercase;
     animation: animateText 3s ease-in-out infinite;
     animation-delay: calc(0.1s * var(--i));
@@ -100,6 +105,18 @@ header {
     }
     20% {
         transform: translateY(-20px);
+    }
+}
+
+@media screen AND (max-width: 600px) {
+    .header a {
+        font-size: 1.25em;
+    }
+    .wavy-wrapper {
+        flex-direction: column;
+    }
+    .wavy span {
+        font-size: 3em;
     }
 }
 
