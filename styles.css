@@ -420,13 +420,14 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
-.image,
-.text {
+.image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .text {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .text p {
