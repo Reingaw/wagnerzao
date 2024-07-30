@@ -132,6 +132,19 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   padding-block: 60px;
+
+  @media screen AND (max-width: 810px) {
+    flex-direction: column;
+
+    @media screen AND (max-width: 768px) {
+      .header a {
+        font-size: 1.25em;
+      }
+      .wavy span {
+        font-size: 3em;
+      }
+    }
+  }
 }
 .wavy {
   position: relative;
@@ -154,18 +167,6 @@ body::-webkit-scrollbar-thumb {
   }
   20% {
     transform: translateY(-20px);
-  }
-}
-
-@media screen AND (max-width: 768px) {
-  .header a {
-    font-size: 1.25em;
-  }
-  .wavy-wrapper {
-    flex-direction: column;
-  }
-  .wavy span {
-    font-size: 3em;
   }
 }
 
@@ -439,9 +440,13 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   flex-direction: column;
 
-  @media screen AND (max-width: 680px) {
-    padding-inline: 1.5rem;
-    padding-top: 1.5rem;
+  @media screen AND (max-width: 810px) {
+    padding-inline: 1rem;
+
+    @media screen AND (max-width: 680px) {
+      padding-inline: 1.5rem;
+      padding-top: 1.5rem;
+    }
   }
 }
 .text p {
