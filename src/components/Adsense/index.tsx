@@ -1,30 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const AdSense: React.FC<AdSenseProps> = ({
   dataAdSlot,
   dataAdClient,
-  dataAdFormat = "auto",
-  fullWidthResponsive = true,
-  style = { display: "block" },
+  style,
 }) => {
+  const adRef = useRef<HTMLModElement>(null);
+
   useEffect(() => {
-    try {
-      // O push({}) inicializa o anúncio no slot disponível
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.error("AdSense error:", error);
-    }
-  }, []);
+    const timer = setTimeout(() => {
+      try {
+        if (
+          window.adsbygoogle &&
+          adRef.current &&
+          !adRef.current.hasAttribute("data-adsbygoogle-status")
+        ) {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          console.log(`AdSense: Slot ${dataAdSlot} inicializado.`);
+        }
+      } catch (error) {
+        console.error("AdSense Error: ", error);
+      }
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [dataAdSlot]);
 
   return (
-    <div className="ad-container" style={{ overflow: "hidden" }}>
+    <div style={{ textAlign: "center", overflow: "hidden", minWidth: "250px" }}>
       <ins
+        ref={adRef}
         className="adsbygoogle"
-        style={style}
+        style={style || { display: "block" }}
         data-ad-client={dataAdClient}
         data-ad-slot={dataAdSlot}
-        data-ad-format={dataAdFormat}
-        data-full-width-responsive={fullWidthResponsive.toString()}
+        data-ad-format="horizontal"
+        data-full-width-responsive="true"
       />
     </div>
   );
