@@ -2,7 +2,7 @@ import { AnimatedButtonWrapper } from "./styles";
 
 interface AnimatedButtonProps {
   readonly text: string;
-  readonly onClick: () => void;
+  readonly onClick?: () => void;
 }
 
 const links = new Map([
