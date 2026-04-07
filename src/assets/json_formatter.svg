@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="475"
+   height="90"
+   viewBox="0 0 125.67699 23.812498"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient12">
+      <stop
+         style="stop-color:#00f0f0;stop-opacity:1;"
+         offset="0"
+         id="stop12" />
+      <stop
+         style="stop-color:#772aff;stop-opacity:1;"
+         offset="1"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient9">
+      <stop
+         style="stop-color:#00f0f0;stop-opacity:1;"
+         offset="0"
+         id="stop10" />
+      <stop
+         style="stop-color:#772aff;stop-opacity:1;"
+         offset="1"
+         id="stop11" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2">
+      <stop
+         style="stop-color:#00f0f0;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#772aff;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="39.381573"
+       y1="208.97124"
+       x2="169.38268"
+       y2="208.97124"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-29.108194,-198.11555)" />
+    <linearGradient
+       xlink:href="#linearGradient9"
+       id="linearGradient11"
+       x1="73.874153"
+       y1="80.312958"
+       x2="101.42058"
+       y2="110.90639"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.994772,0,0,0.99477199,-59.71425,-89.49714)" />
+    <linearGradient
+       xlink:href="#linearGradient12"
+       id="linearGradient13"
+       x1="111.91047"
+       y1="217.28217"
+       x2="169.19823"
+       y2="217.28217"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-23.73258,-199.7606)" />
+  </defs>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.2672px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient11);stroke:none;stroke-width:0.2632"
+       x="-2.8630319"
+       y="17.888508"
+       id="text1"
+       transform="scale(0.99469876,1.0053295)"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.2672px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:url(#linearGradient11);fill-opacity:1;stroke:none;stroke-width:0.2632"
+         x="-2.8630319"
+         y="17.888508">{                 }</tspan></text>
+    <g
+       id="g13">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient3);stroke:none;stroke-width:0.264583"
+         x="8.9918051"
+         y="15.667777"
+         id="text2"><tspan
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';fill:url(#linearGradient3);stroke:none;stroke-width:0.264583"
+           x="8.9918051"
+           y="15.667777">JSONFormatter</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Monospace;-inkscape-font-specification:Monospace;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:url(#linearGradient13);stroke-width:0.264583"
+         x="88.186157"
+         y="18.719076"
+         id="text11"><tspan
+           id="tspan11"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke:url(#linearGradient13);stroke-width:0.264583"
+           x="88.186157"
+           y="18.719076">by Wagner Andrade</tspan></text>
+    </g>
+  </g>
+</svg>

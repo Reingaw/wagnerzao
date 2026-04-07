@@ -3,6 +3,7 @@ import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
 import { BrowserRouter } from "react-router-dom";
 import { Router } from "./Router";
+import { Toast } from "./components/Toast";
 
 export const App = () => {
   return (
@@ -11,6 +12,7 @@ export const App = () => {
         <Router />
       </BrowserRouter>
       <GlobalStyle />
+      <Toast message="Texto copiado!" type="success" />
     </ThemeProvider>
   );
 };

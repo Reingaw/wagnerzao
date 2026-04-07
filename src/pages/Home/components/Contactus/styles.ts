@@ -6,8 +6,8 @@ export const ContactWrapper = styled.section`
   overflow: hidden;
 `;
 export const ContactContainer = styled.div`
-  padding-top: 120px;
-  padding-bottom: 200px;
+  padding-top: 250px;
+  padding-bottom: 250px;
   max-width: 1366px;
   margin-inline: auto;
   z-index: 10;
@@ -229,12 +229,13 @@ export const InputSend = styled.input.attrs({ type: "checkbox" })`
       ${Move} {
         animation: fly 3s cubic-bezier(0.72, -0.23, 0.35, 1.03) 1s both;
       }
+
       @keyframes fly {
         0% {
           transform: translate3d(0, 0, 0rem);
         }
         50% {
-          transform: translate3d(400rem, -400rem, 0rem);
+          transform: translate3d(600rem, -600rem, 0rem);
         }
         51% {
           transform: translate3d(-100rem, 100rem, 0rem);
@@ -282,7 +283,7 @@ export const Wave = styled.div`
     position: absolute;
     width: 325vh;
     height: 325vh;
-    bottom: -1616px;
+    bottom: -1255px;
     left: 50%;
     transform: translate(-50%, -75%);
     background: ${({ theme }) => theme["black-100"]};

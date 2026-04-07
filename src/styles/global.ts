@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     /* For Firefox */
     overflow-y: scroll;
     scrollbar-color: ${({ theme }) => theme["blue-100"]} ${({ theme }) =>
-  theme["black-600"]};
+      theme["black-600"]};
     scrollbar-width: thin;
   }
   body::-webkit-scrollbar {
@@ -41,4 +41,21 @@ export const GlobalStyle = createGlobalStyle`
   body, input, textarea, button {
     font: 400 1rem Roboto, sans-serif;
   }
+
+  /* Cores para o Highlighting */
+  .json-key {
+    color: #a6e22e;
+  } /* Verde */
+  .json-string {
+    color: #e6db74;
+  } /* Amarelo */
+  .json-number {
+    color: #ae81ff;
+  } /* Roxo */
+  .json-boolean {
+    color: #f92672;
+  } /* Rosa */
+  .json-null {
+    color: #66d9ef;
+  } /* Azul */
 `;

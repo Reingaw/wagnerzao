@@ -4,6 +4,7 @@ export const AnimatedButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   & a {
     min-width: 130px;
@@ -20,7 +21,7 @@ export const AnimatedButtonWrapper = styled.div`
     &::before {
       content: "";
       position: absolute;
-      width: 140px;
+      width: 170px;
       height: 70%;
       background: linear-gradient(
         90deg,
