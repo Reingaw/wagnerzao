@@ -13,7 +13,6 @@ import {
   PartLeft,
   PartRight,
   Rotate,
-  Wave,
 } from "./styles";
 
 export function ContactUs() {
