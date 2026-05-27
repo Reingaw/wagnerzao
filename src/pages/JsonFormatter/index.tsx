@@ -20,7 +20,6 @@ import {
 } from "./styles";
 
 import Logo from "../../assets/json_formatter.svg";
-4;
 
 export const JsonFormatter = () => {
   const [inputValue, setInputValue] = useState("");

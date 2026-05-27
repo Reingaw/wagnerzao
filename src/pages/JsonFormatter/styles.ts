@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const JsonFormatterContainer = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0 auto;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   min-height: 100vh;
   margin: 0 auto;
   justify-items: center;
@@ -13,11 +13,18 @@ export const JsonFormatterContainer = styled.section`
 
   @media (max-width: 768px) {
     padding: 1rem;
+    min-height: 97vh;
   }
 `;
 
 export const JsonFormatterLogo = styled.div`
   margin-block: 25px;
+
+  @media (max-width: 480px) {
+    & img {
+      width: 350px;
+    }
+  }
 `;
 
 export const JsonFormatterInputWrapper = styled.div`
@@ -58,6 +65,10 @@ export const JsonFormatterControls = styled.div`
   margin-block: 15px;
   width: 100%;
   justify-content: flex-end;
+
+  @media (max-width: 480px) {
+    justify-content: space-between;
+  }
 `;
 
 export const JsonFormatterOutputContainer = styled.div`
