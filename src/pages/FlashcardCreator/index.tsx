@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { useToast } from "../../hooks/useToast.ts";
 import { AnimatedButton } from "../../components/AnimatedButton";
 import { FlashcardCreatorContainer } from "./styles";
