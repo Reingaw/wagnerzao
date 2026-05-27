@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const ContactWrapper = styled.section`
+  height: 100vh;
   position: relative;
-  background-color: ${({ theme }) => theme["blue-300"]};
+  background-color: ${({ theme }) => theme["black-600"]};
   overflow: hidden;
 `;
 export const ContactContainer = styled.div`

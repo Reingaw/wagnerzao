@@ -81,11 +81,6 @@ export function ContactUs() {
           </FormContainer>
         </FormWrapper>
       </ContactContainer>
-      <Wave>
-        <span></span>
-        <span></span>
-        <span></span>
-      </Wave>
     </ContactWrapper>
   );
 }
