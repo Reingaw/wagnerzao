@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useRef } from "react";
+import { useLanguage } from "../../../../hooks/useLanguage";
+import { texts } from "../../../../helpers/language";
 import { Content, Rocket, Scene, Text } from "./styles";
 
 import RocketImg from "../../../../assets/rocket.png";
 
 export function Motivation() {
+  const { language } = useLanguage();
   const scene = useRef<HTMLDivElement>(null);
 
   const stars = useCallback(() => {
@@ -38,26 +41,9 @@ export function Motivation() {
           <img src={RocketImg} alt="rocket_3D" />
         </Rocket>
         <Text>
-          <p>
-            Ao longo da minha trajetória profissional, sempre enxerguei o
-            desenvolvimento de software como uma jornada contínua de
-            descobertas. Em um universo tecnológico que está em constante
-            expansão, acredito que a busca por conhecimento e inovação é
-            essencial.
-          </p>
-          <p>
-            Cada nova tecnologia que aprendo, cada desafio que enfrento,
-            representa para mim a descoberta de uma nova galáxia: cheia de
-            possibilidades, complexidade e oportunidades para evoluir. É por
-            isso que faço do lifelong learning um pilar da minha carreira.
-          </p>
-          <p>
-            Assim como exploradores do universo, profissionais de tecnologia
-            precisam estar em constante movimento, se adaptando, aprendendo e
-            ultrapassando seus próprios limites. Essa mentalidade me permite
-            entregar soluções cada vez mais eficazes, modernas e alinhadas às
-            demandas de um mercado em transformação.
-          </p>
+          <p>{texts[language][9]}</p>
+          <p>{texts[language][10]}</p>
+          <p>{texts[language][11]}</p>
         </Text>
       </Content>
     </Scene>

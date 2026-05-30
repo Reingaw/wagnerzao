@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const ContactWrapper = styled.section`
   height: 100vh;
   position: relative;
-  background-color: ${({ theme }) => theme["black-600"]};
+  background-image: url(/img/office_2.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  bg-opacity: 0.5;
   overflow: hidden;
 `;
 export const ContactContainer = styled.div`
@@ -164,7 +168,7 @@ export const Rotate = styled.div`
   position: relative;
   transform-style: preserve-3d;
 `;
-export const Move = styled.div`
+export const Move = styled.div<{ text: string }>`
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
@@ -178,7 +182,7 @@ export const Move = styled.div`
 
     &::before,
     &::after {
-      content: "Contato";
+      content: "${(props) => props.text}";
       width: 100%;
       height: 100%;
       position: absolute;

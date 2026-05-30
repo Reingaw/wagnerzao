@@ -6,9 +6,12 @@ import {
   FileJsx,
   FileTsx,
 } from "@phosphor-icons/react";
+import { useLanguage } from "../../../../hooks/useLanguage";
+import { texts } from "../../../../helpers/language";
 import { Card, Content, TechnologiesWrapper, CardContainer } from "./styles";
 
 export function Technologies() {
+  const { language } = useLanguage();
   const span = [1, 2, 3, 4];
 
   return (
@@ -23,11 +26,7 @@ export function Technologies() {
               <FileHtml size={32} />
               <div>HTML5</div>
             </h2>
-            <p>
-              Com mais de 5 anos de experiência, domino a estruturação semântica
-              e as melhores práticas para acessibilidade e SEO, garantindo
-              código limpo e eficiente.
-            </p>
+            <p>{texts[language][3]}</p>
           </Content>
         </Card>
         <Card>
@@ -39,12 +38,7 @@ export function Technologies() {
               <FileCss size={32} />
               <div>CSS3</div>
             </h2>
-            <p>
-              Experiente no design de interfaces modernas, bem estruturadas,
-              acessíveis e responsivas. Tendo domínio em técnicas modernas como
-              flexbox, grid e animações para garantir uma boa experiência do
-              usuário.
-            </p>
+            <p>{texts[language][4]}</p>
           </Content>
         </Card>
         <Card>
@@ -57,11 +51,7 @@ export function Technologies() {
               <FileTs size={32} />
               <div>TypeScript</div>
             </h2>
-            <p>
-              Vasta experiência com JavaScript, desenvolvendo aplicações
-              dinâmicas e interativas, adotei o uso do TypeScript garantindo um
-              código mais seguro e escalável.
-            </p>
+            <p>{texts[language][5]}</p>
           </Content>
         </Card>
         <Card>
@@ -74,11 +64,7 @@ export function Technologies() {
               <FileTsx size={32} />
               <div>React</div>
             </h2>
-            <p>
-              Com sólida experiência em React, desenvolvo aplicações escaláveis
-              e performáticas, utilizando hooks, context API e bibliotecas como
-              Axios, React Query e entre outras.
-            </p>
+            <p>{texts[language][6]}</p>
           </Content>
         </Card>
         <Card>
@@ -91,11 +77,7 @@ export function Technologies() {
               <FileTsx size={32} />
               <div>React Native</div>
             </h2>
-            <p>
-              Atráves do React Native desenvolvo aplicativos móveis para Android
-              e iOS, aproveitando minha experiência para criar interfaces
-              nativas eficientes e responsivas.
-            </p>
+            <p>{texts[language][7]}</p>
           </Content>
         </Card>
         <Card>
@@ -108,11 +90,7 @@ export function Technologies() {
               <FileTs size={32} />
               <div>Vue JS</div>
             </h2>
-            <p>
-              Com Vue.js construo aplicações leves e reativas, aproveitando a
-              flexibilidade da Composition API e do Vuex para gerenciar estados
-              de forma eficiente.
-            </p>
+            <p>{texts[language][8]}</p>
           </Content>
         </Card>
       </CardContainer>

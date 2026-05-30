@@ -1,3 +1,4 @@
+import { useLanguage } from "../../../../hooks/useLanguage";
 import {
   PortfolioWrapper,
   Container,
@@ -13,6 +14,8 @@ import {
 import { PROJECTS } from "../../../../helpers/projects";
 
 export function Portfolio() {
+  const { language } = useLanguage();
+
   return (
     <PortfolioWrapper>
       <Container>
@@ -28,7 +31,7 @@ export function Portfolio() {
                   <h2>{p.title}</h2>
                   <p>{p.desc}</p>
                   <Button href={p.link} target="_blank">
-                    Ver Projeto
+                    {language === "pt-BR" ? "Ver Projeto" : "View Project"}
                   </Button>
                 </Details>
               </Content>

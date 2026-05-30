@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const PortfolioWrapper = styled.section`
-  background-color: ${({ theme }) => theme["black-600"]};
+  background-image: url(/img/coding_2.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 `;
 export const Container = styled.div`
   padding: 120px 40px;

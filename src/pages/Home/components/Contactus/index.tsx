@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "../../../../hooks/useLanguage";
 import {
   ContactContainer,
   ContactWrapper,
@@ -16,6 +17,8 @@ import {
 } from "./styles";
 
 export function ContactUs() {
+  const { language } = useLanguage();
+
   const [check, setCheck] = useState(false);
 
   useEffect(() => {
@@ -38,7 +41,7 @@ export function ContactUs() {
                 readOnly
               />
               <Rotate>
-                <Move>
+                <Move text={language === "pt-BR" ? "Contato" : "Contact"}>
                   <PartLeft></PartLeft>
                   <PartRight></PartRight>
                 </Move>
@@ -50,10 +53,14 @@ export function ContactUs() {
               action="https://formsubmit.co/contato@wagnerzao.com"
               method="POST"
             >
-              <h2>Envie uma Mensagem</h2>
+              <h2>
+                {language === "pt-BR" ? "Envie uma Mensagem" : "Send a Message"}
+              </h2>
               <InputBox>
                 <input type="text" name="name" required />
-                <span>Nome Completo</span>
+                <span>
+                  {language === "pt-BR" ? "Nome Completo" : "Full Name"}
+                </span>
               </InputBox>
               <InputBox>
                 <input type="text" name="email" required />
@@ -61,10 +68,19 @@ export function ContactUs() {
               </InputBox>
               <InputBox>
                 <textarea name="message" maxLength={106} required></textarea>
-                <span>Digite a Mensagem...</span>
+                <span>
+                  {language === "pt-BR"
+                    ? "Digite a Mensagem..."
+                    : "Enter your message..."}
+                </span>
               </InputBox>
               <InputBox>
-                <input type="submit" name="send" value="Enviar" required />
+                <input
+                  type="submit"
+                  name="send"
+                  value={language === "pt-BR" ? "Enviar" : "Send"}
+                  required
+                />
               </InputBox>
               <input
                 type="hidden"

@@ -18,14 +18,23 @@ interface Window {
 }
 
 interface AdSenseProps {
-  /** O ID do bloco de anúncio (ex: "1234567890") */
   dataAdSlot: string;
-  /** O seu ID de editor (ex: "ca-pub-XXXXXXXXXXXXXXXX") */
   dataAdClient: string;
-  /** Formato do anúncio. Padrão é 'auto' */
   dataAdFormat?: string;
-  /** Se deve ser responsivo em largura total. Padrão é true */
   fullWidthResponsive?: boolean;
-  /** Estilos customizados para o container */
   style?: React.CSSProperties;
 }
+
+interface AnkiCard {
+  front: string;
+  back: string;
+  reading: string;
+  notes: string;
+}
+
+type LanguageContextProps = {
+  language: LanguageType;
+  setLanguage: React.Dispatch<React.SetStateAction<LanguageType>>;
+};
+
+type LanguageType = "pt-BR" | "en-US";
