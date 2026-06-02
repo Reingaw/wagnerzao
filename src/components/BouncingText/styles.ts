@@ -8,7 +8,7 @@ export const WavyWrapper = styled.div`
   margin-block: 2.5rem;
 `;
 
-export const Wavy = styled.div`
+export const Wavy = styled.div<{ fontSize: number }>`
   position: relative;
 
   & span {
@@ -16,7 +16,7 @@ export const Wavy = styled.div`
     bottom: 0.6rem;
     display: inline-block;
     color: ${({ theme }) => theme["blue-300"]};
-    font-size: 4rem;
+    font-size: ${(props) => props.fontSize}rem;
     font-weight: 700;
     text-transform: uppercase;
     animation: animateText 3s ease-in-out infinite;

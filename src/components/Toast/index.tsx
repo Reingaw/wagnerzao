@@ -1,10 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useToast } from "../../hooks/useToast";
-import {
-  InfoIcon,
-  ErrorIcon,
-  SuccessIcon,
-} from "../../assets/icons/toastIcons";
+import { Info, CheckCircle, WarningCircle } from "@phosphor-icons/react";
 import { ToastContainer, ToastContent, ToastProgress } from "./styles";
 
 export const Toast: React.FC<ToastProps> = () => {
@@ -49,9 +45,9 @@ export const Toast: React.FC<ToastProps> = () => {
           data-type={type}
         >
           <span>
-            {type === "success" && <SuccessIcon />}
-            {type === "error" && <ErrorIcon />}
-            {type === "info" && <InfoIcon />}
+            {type === "success" && <CheckCircle size={32} />}
+            {type === "error" && <WarningCircle size={32} />}
+            {type === "info" && <Info size={32} />}
           </span>
           <span>{message}</span>
           <ToastProgress ref={toastProgressRef} />

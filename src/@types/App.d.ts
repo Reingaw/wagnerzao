@@ -38,3 +38,9 @@ type LanguageContextProps = {
 };
 
 type LanguageType = "pt-BR" | "en-US";
+
+interface requestParams {
+  prefix: string;
+  endpoint: string;
+  params: Object;
+}

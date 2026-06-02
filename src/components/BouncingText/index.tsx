@@ -2,9 +2,10 @@ import { Wavy, WavyWrapper } from "./styles";
 
 interface BouncingtextProps {
   readonly text: string;
+  readonly size: number;
 }
 
-export function Bouncingtext({ text }: BouncingtextProps) {
+export function Bouncingtext({ text, size }: BouncingtextProps) {
   const spans = Array.from(text).map((char, index) => (
     <span
       key={`${char}-${index}`}
@@ -16,8 +17,8 @@ export function Bouncingtext({ text }: BouncingtextProps) {
   ));
 
   return (
-    <WavyWrapper data-testid="bouncingMessage">
-      <Wavy>{spans}</Wavy>
+    <WavyWrapper>
+      <Wavy fontSize={size}>{spans}</Wavy>
     </WavyWrapper>
   );
 }

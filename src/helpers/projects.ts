@@ -11,7 +11,7 @@ export const PROJECTS = [
     title: "Flashcard Creator",
     desc: "Um novo projeto!",
     link: "/flashcard-creator",
-    image: "/img/soon.jpeg",
+    image: "/img/nihongo.jpeg",
   },
   {
     id: 3,

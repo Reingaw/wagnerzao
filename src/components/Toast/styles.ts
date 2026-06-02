@@ -66,6 +66,7 @@ export const ToastContent = styled.div`
     width: 20px;
     height: 20px;
     flex-shrink: 0;
+    color: inherit;
   }
 `;
 

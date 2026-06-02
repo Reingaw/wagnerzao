@@ -35,7 +35,7 @@ export function Home() {
         </nav>
       </Header>
       <HomeWrapper>
-        <Bouncingtext text="Frontend_Developer..." />
+        <Bouncingtext text="Frontend_Developer..." size={4} />
         <ButtonWrapper>
           <AnimatedButton text="linkedin" />
           <AnimatedButton text="github" />
